@@ -9,7 +9,7 @@ import (
 	"github.com/mayukhsarkar/k8s-mcp-server/pkg/kubernetes"
 	"github.com/mayukhsarkar/k8s-mcp-server/pkg/logs"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
-	"k8s.io/client-go/kubernetes"
+	k8s "k8s.io/client-go/kubernetes"
 )
 
 // Handler handles MCP commands
@@ -19,7 +19,7 @@ type Handler struct {
 }
 
 // NewHandler creates a new MCP handler
-func NewHandler(k8sClient *kubernetes.Client, clientset *kubernetes.Clientset) *Handler {
+func NewHandler(k8sClient *kubernetes.Client, clientset *k8s.Clientset) *Handler {
 	return &Handler{
 		k8sClient:  k8sClient,
 		logManager: logs.NewLogManager(clientset),
