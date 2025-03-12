@@ -1,0 +1,7 @@
+# These owners will be the default owners for everything in the repo.
+* @mayukhsarkar
+
+# Specific ownership for certain directories
+/cmd/ @mayukhsarkar
+/pkg/ @mayukhsarkar
+/deploy/ @mayukhsarkar 
